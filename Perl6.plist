@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>module</string>
+		<string>class</string>
+		<string>if</string>
+		<string>elsif</string>
+		<string>else</string>
+		<string>while</string>
+		<string>for</string>
+		<string>sub</string>
+		<string>method</string>
+		<string>multi</string>
+		<string>MAIN</string>
+		<string>state</string>
+		<string>is</string>
+		<string>export</string>
+		<string>unless</string>
+		<string>return</string>
+		<string>my</string>
+		<string>state</string>
+		<string>our</string>
+		<string>say</string>
+	</array>
+	<key>BBLMPredefinedNameList</key>
+	<array>
+		<string>True</string>
+		<string>False</string>
+		<string>Int</string>
+		<string>Str</string>
+		<string>:exists</string>
+		<string>:x</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>PRL6</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Perl 6</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.pm6</string>
+		</dict>
+	</array>
+	<key>BBLMPreferredFilenameExtension</key>
+	<string>p6</string>
+	<key>Language Features</key>
+	<dict>
+		<key>Open Line Comments</key>       <string>#</string>
+		<key>Identifier and Keyword Character Class</key> <string>A-Za-z0-9_\?!</string>
+		<key>Open Strings 1</key>           <string>&quot;</string>
+		<key>Open Strings 2</key>           <string>&apos;</string>
+		<key>Close Strings 1</key>          <string>&quot;</string>
+		<key>Close Strings 2</key>          <string>&apos;</string>
+		<key>Open Statement Blocks</key>    <string>{</string>
+		<key>Close Statement Blocks</key>   <string>}</string>
+		<key>Escape Char in Strings 1</key>     <string>\</string>
+		<key>End-of-line Ends Strings 1</key>   <false/>
+		<key>Prefix for Functions</key>   <string>sub</string>
+		</dict>
+</dict>
+</plist>
