@@ -92,6 +92,14 @@
 			<key>BBLMLanguageSuffix</key>
 			<string>.pm6</string>
 		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.p6</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.pl6</string>
+		</dict>
 	</array>
 	<key>BBLMPreferredFilenameExtension</key>
 	<string>p6</string>
