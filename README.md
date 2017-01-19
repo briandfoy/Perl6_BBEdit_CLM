@@ -6,7 +6,7 @@ are a simple way to colorize simple source code. Perl 6, with various
 smart balancing features, is a bit beyond simple, but this works for
 the stuff I do.
 
-![colored syntax_test.p6](syntax_test.png)
+![colored syntax-test.p6](syntax-test.png)
 
 Put the [Perl6.plist](Perl6.plist) file in your _Application Support_
 directory, which can be under _~/Library_ or in your Dropbox folder if
