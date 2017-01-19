@@ -2,7 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<!-- http://www.barebones.com/support/develop/clm.html -->
+	<!--
+	The BBEdit Perl 6 Codeless Language Module
+		https://github.com/briandfoy/Perl6_BBEdit_CLM
+
+	This work is licensed under the Artistic License 2.0
+	Copyright © 2016-2017, brian d foy <brian.d.foy@gmail.com>
+
+	More info about Codeless Language Modules
+			http://www.barebones.com/support/develop/clm.html
+	-->
 	<key>BBEditDocumentType</key>
 	<string>CodelessLanguageModule</string>
 	<key>BBLMColorsSyntax</key>
