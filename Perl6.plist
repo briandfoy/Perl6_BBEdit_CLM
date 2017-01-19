@@ -11,26 +11,65 @@
 	<true/>
 	<key>BBLMKeywordList</key>
 	<array>
-		<string>module</string>
+		<string>CATCH</string>
+		<string>BEGIN</string>
+		<string>NEXT</string>
+		<string>FIRST</string>
+		<string>LAST</string>
+		<string>END</string>
+		<string>KEEP</string>
+		<string>UNDO</string>
+		<string>INIT</string>
+		<string>ENTER</string>
+		<string>LEAVE</string>
+		<string>PRE</string>
+		<string>POST</string>
 		<string>class</string>
-		<string>if</string>
-		<string>elsif</string>
+		<string>die</string>
+		<string>default</string>
+		<string>do</string>
+		<string>does</string>
+		<string>eager</string>
 		<string>else</string>
-		<string>while</string>
-		<string>for</string>
-		<string>sub</string>
-		<string>method</string>
-		<string>multi</string>
-		<string>MAIN</string>
-		<string>state</string>
-		<string>is</string>
+		<string>elsif</string>
 		<string>export</string>
-		<string>unless</string>
-		<string>return</string>
+		<string>fail</string>
+		<string>for</string>
+		<string>given</string>
+		<string>grammar</string>
+		<string>has</string>
+		<string>if</string>
+		<string>is</string>
+		<string>join</string>
+		<string>loop</string>
+		<string>MAIN</string>
+		<string>method</string>
+		<string>module</string>
+		<string>multi</string>
 		<string>my</string>
-		<string>state</string>
+		<string>of</string>
+		<string>open</string>
 		<string>our</string>
+		<string>quietly</string>
+		<string>return</string>
+		<string>role</string>
+		<string>rule</string>
 		<string>say</string>
+		<string>so</string>
+		<string>subset</string>
+		<string>put</string>
+		<string>sink</string>
+		<string>state</string>
+		<string>sub</string>
+		<string>times</string>
+		<string>token</string>
+		<string>try</string>
+		<string>unit</string>
+		<string>unless</string>
+		<string>when</string>
+		<string>where</string>
+		<string>while</string>
+		<string>use</string>
 	</array>
 	<key>BBLMPredefinedNameList</key>
 	<array>
