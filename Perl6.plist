@@ -107,15 +107,48 @@
 	<dict>
 		<key>Open Line Comments</key>       <string>#</string>
 		<key>Identifier and Keyword Character Class</key> <string>A-Za-z0-9_\?!</string>
-		<key>Open Strings 1</key>           <string>&quot;</string>
-		<key>Open Strings 2</key>           <string>&apos;</string>
-		<key>Close Strings 1</key>          <string>&quot;</string>
-		<key>Close Strings 2</key>          <string>&apos;</string>
 		<key>Open Statement Blocks</key>    <string>{</string>
 		<key>Close Statement Blocks</key>   <string>}</string>
 		<key>Escape Char in Strings 1</key>     <string>\</string>
 		<key>End-of-line Ends Strings 1</key>   <false/>
 		<key>Prefix for Functions</key>   <string>sub</string>
-		</dict>
+		<key>Comment Pattern</key>
+		<string><![CDATA[
+		(?x:
+			(?s: \# ` \(   .*?   \)          ) | (?# Inline comment, needs 「」 and other balanced)
+			(    \#        .*?             $ ) | (?# Line comment)
+			(?s: ^=begin\b .+? ^=end\b .*? $ )   (?# Block comment)
+		)
+		]]></string>
+		<key>String Pattern</key>
+		<string><![CDATA[
+		(?x:
+			(  (Q|qq|q)  (:to /END/ ) .+? ^\s*END$                           ) | (?# Here doc - still broken )
+			(  Q  (:[a-z]+)* (?P<delimQ>.)        .*?           (?P=delimQ)  ) | (?# Q//  )
+			( qq  (:[a-z]+)* (?P<delimqq>.)       .*?           (?P=delimqq) ) | (?# qq// )
+			( qq  (:[a-z]+)* {             (\\}|[^}\r]|\\\r)*         }      ) | (?# qq{} )
+			( qq  (:[a-z]+)* \[            (\\\]|[^\]\r]|\\\r)*       \]     ) | (?# qq[] )
+			( qq  (:[a-z]+)* \<            (\\}|[^>\r]|\\\r)*         \>     ) | (?# qq<> )
+			(  q  (:[a-z]+)* (?P<delimq>.)        .*?           (?P=delimq)  ) | (?# q//  )
+			(  q  (:[a-z]+)* {             (\\}|[^}\r]|\\\r)*         }      ) | (?# qq{} )
+			(                      "       (\\"|[^"\r]|\\\r)*         "      ) | (?# Double-quote)
+			(                      '       (\\'|[^'\r]|\\\r)*         '      ) | (?# Single-quote)
+			(                     <<              .*?         >>             ) |  (?# word quoting)
+			(                      <              .*?         >              ) |  (?# word quoting)
+			(                     「       (\\」|[^」\r]|\\\r)*         」    )   (?# word quoting)
+		)
+		]]></string>
+		<key>Function Pattern</key>
+		<string><![CDATA[
+		(?x:
+			(?P<function>
+				(sub|multi sub|submethod|method|regex|token|rule)
+				\s+
+				(?P<function_name> [\w'-]+ )
+			)
+		)
+		]]>
+		</string>
+	</dict>
 </dict>
 </plist>
