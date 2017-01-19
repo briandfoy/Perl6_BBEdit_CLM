@@ -30,10 +30,6 @@ my $here = q:to/END/;
 	This is a here doc
 	END
 
-my $here = q:to/END/;
-	This is a here doc
-	END
-
 # these names should show up in the function list
 sub do_something { 1 }
 multi sub do_the_other_thing { 2 }
