@@ -130,21 +130,24 @@
 		)
 		]]></string>
 		<key>String Pattern</key>
+		<!-- I've made \W a valid delimiter for quoting even though
+		that's not good enough. It's just good enough for me.
+		-->
 		<string><![CDATA[
 		(?x:
 			(  (Q|qq|q)  (:to /END/ ) .+? ^\s*END$                           ) | (?# Here doc - still broken )
-			(  Q  (:[a-z]+)* (?P<delimQ>.)        .*?           (?P=delimQ)  ) | (?# Q//  )
-			( qq  (:[a-z]+)* (?P<delimqq>.)       .*?           (?P=delimqq) ) | (?# qq// )
-			( qq  (:[a-z]+)* {             (\\}|[^}\r]|\\\r)*         }      ) | (?# qq{} )
+			(  Q  (:[a-z]+)* (?P<delimQ>\W)        .*?          (?P=delimQ)  ) | (?# Q//  )
+			( qq  (:[a-z]+)* (?P<delimqq>\W)       .*?          (?P=delimqq) ) | (?# qq// )
+			( qq  (:[a-z]+)* \{            (\\}|[^}\r]|\\\r)*         }      ) | (?# qq{} )
 			( qq  (:[a-z]+)* \[            (\\\]|[^\]\r]|\\\r)*       \]     ) | (?# qq[] )
 			( qq  (:[a-z]+)* \<            (\\}|[^>\r]|\\\r)*         \>     ) | (?# qq<> )
-			(  q  (:[a-z]+)* (?P<delimq>.)        .*?           (?P=delimq)  ) | (?# q//  )
-			(  q  (:[a-z]+)* {             (\\}|[^}\r]|\\\r)*         }      ) | (?# qq{} )
+			(  q  (:[a-z]+)* (?P<delimq>\W)        .*?          (?P=delimq)  ) | (?# q//  )
+			(  q  (:[a-z]+)* \{            (\\}|[^}\r]|\\\r)*         }      ) | (?# qq{} )
 			(                      "       (\\"|[^"\r]|\\\r)*         "      ) | (?# Double-quote)
 			(                      '       (\\'|[^'\r]|\\\r)*         '      ) | (?# Single-quote)
-			(                     <<              .*?         >>             ) |  (?# word quoting)
-			(                      <              .*?         >              ) |  (?# word quoting)
-			(                     「       (\\」|[^」\r]|\\\r)*         」    )   (?# word quoting)
+			(                     <<              .*?         >>             ) | (?# word quoting)
+			(                      <              .*?         >              ) | (?# word quoting)
+			(                     「       (\\」|[^」\r]|\\\r)*         」    )    (?# word quoting)
 		)
 		]]></string>
 		<key>Function Pattern</key>
